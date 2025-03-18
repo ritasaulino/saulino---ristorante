@@ -1,58 +1,66 @@
-header {
-    width: 100%;
-    background-color: #ffffff;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 15px;
-}
-
-.header-top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    padding: 20px;
-}
-
+/* Logo centrato senza grande spazio */
 .header-logo img {
-    max-height: 400px; /* Regola a tuo piacimento */
-    margin-bottom: 20px;
+    max-width: 550px;
+    height: auto;
+    margin: 10px auto;
+    display: block;
 }
 
-.header-links {
-    display: flex;
-    gap: 30px;
-    font-size: 1.2rem;
-}
-
-.header-links a {
-    text-decoration: none;
-    color: #000;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
+/* Menù Home, Menu, Contatti fissato in alto */
 .header-menu {
-    margin-top: 20px;
+    position: fixed;
+    top: 0; /* fissato sopra */
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 10px 0;
+    z-index: 9999;
+    text-align: center; /* centrato */
 }
 
 .header-menu ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    justify-content: center;
     padding: 0;
+    margin: 0;
+}
+
+.header-menu ul li {
+    display: inline-block;
+    margin: 0 15px;
 }
 
 .header-menu ul li a {
     text-decoration: none;
-    color: #000;
-    font-size: 1.1rem;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
 }
 
-.header-menu ul li a:hover {
-    border-bottom: 2px solid #000;
+/* Contatti e Social (Prenota ora, Raggiungici, ecc) originali, centrati e invariati */
+.header-links {
+    text-align: center;
+    margin-top: 80px; /* spazio dal menu principale */
+}
+
+.header-links a {
+    color: black; /* colore nero originale */
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.header-links a:hover {
+    color: #003366; /* colore blu elegante al passaggio del mouse */
+    text-decoration: underline;
+}
+
+.header-menu ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
 }
 
 .photo-gallery {
