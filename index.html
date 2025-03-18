@@ -18,10 +18,10 @@
             </div>
 
             <div class="header-links">
-                <a href="tel:+390818391228">📞 Prenota ora</a>
+                <a href="https://social.quandoo.com/en/groups/saulino-ristorante-e-pizzeria-dal-1992-105832">📞 Prenota ora</a>
                 <a href="https://www.google.com/maps/place/Via+Ripuaria+187,+Giugliano+in+Campania" target="_blank">🏠 Raggiungici</a>
                 <a href="https://www.facebook.com/lebaiserristorantepizzeria" target="_blank">𝑓</a>
-                <a href="https://instagram.com" target="_blank">📸</a>
+                <a href="https://www.instagram.com/saulinoristorantedal1992/?igsh=MThwcDFxN2hvcTNiZg%3D%3D&utm_source=qr#" target="_blank">📸</a>
             </div>
         </div>
 
@@ -34,14 +34,35 @@
         </nav>
     </header>
 
-    <section class="photo-gallery">
-        <div class="gallery-container">
-            <img src="immagini/ristorante1.jpg" alt="Piatto 1">
-            <img src="immagini/ristorante2.jpg" alt="Chef">
-            <img src="immagini/ristorante3.jpg" alt="Piatto 2">
+    <section class="galleria-container">
+        <div class="gruppo">
+          <img class="img-gruppo" src="immagini/gruppo1-foto1.jpg">
         </div>
-    </section>
-
+        <div class="gruppo">
+          <img class="img-gruppo" src="immagini/gruppo2-foto1.jpg">
+        </div>
+        <div class="gruppo">
+          <img class="img-gruppo" src="immagini/gruppo3-foto1.jpg">
+        </div>
+      </section>
+      
+      <script>
+      const gruppi = [
+        ["immagini/gruppo1-foto1.jpg", "immagini/gruppo1-foto2.jpg", "immagini/gruppo1-foto3.jpg"],
+        ["immagini/gruppo2-foto1.jpg", "immagini/gruppo2-foto2.jpg", "immagini/gruppo2-foto3.jpg"],
+        ["immagini/gruppo3-foto1.jpg", "immagini/gruppo3-foto2.jpg", "immagini/gruppo3-foto3.jpg"]
+      ];
+      
+      document.querySelectorAll('.img-gruppo').forEach((img, index) => {
+        let indiceImmagine = 0;
+      
+        img.addEventListener('mouseenter', function() {
+          indiceImmagine = (indiceImmagine + 1) % gruppi[index].length;
+          img.src = gruppi[index][indiceImmagine];
+        });
+      });
+      </script>      
+    
     <section class="home-intro">
         <p class="intro-quote" style="font-family: 'Allura', cursive;">“Ogni piatto racconta una storia fatta di passione, tradizione e creatività. Da Saulino, ogni boccone è un viaggio sensoriale unico.”</p>
         <p class="intro-description">Dal 1992, Saulino Ristorante e Pizzeria è sinonimo di qualità e accoglienza nel cuore di Napoli. La nostra filosofia si basa sull'utilizzo di ingredienti freschi e genuini, selezionati con cura e lavorati con maestria dai nostri chef. Che si tratti delle nostre celebri pizze artigianali o dei raffinati piatti di mare e terra, ogni portata rappresenta un omaggio alla tradizione culinaria partenopea, reinterpretata con estro e originalità per soddisfare anche i palati più esigenti.</p>
