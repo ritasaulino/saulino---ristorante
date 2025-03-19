@@ -1,4 +1,40 @@
-<link rel="stylesheet" href="styles.css">
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Menu</title>
+    <link rel="stylesheet" href="style.css"> <!-- Se hai un file CSS -->
+</head>
+<body>
+
+    <!-- Navbar -->
+    <button class="menu-button" onclick="toggleMenu()">☰ Menu</button>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="contatti.html">Contatti</a>
+    </nav>
+
+    <!-- Contenuto del menu -->
+    <h1>Il Nostro Menu</h1>
+    <p>Benvenuto nel nostro ristorante! Ecco il nostro menu.</p>
+
+    <!-- QR Code -->
+    <div style="text-align: center; margin-top: 20px;">
+        <p>Scansiona il QR Code per scaricare il menu:</p>
+        <img src="qrcode_menu.png" alt="QR Code Menu" width="200">
+    </div>
+
+    <!-- Script per la Navbar Mobile -->
+    <script>
+        function toggleMenu() {
+            document.querySelector(".nav-links").classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>
 
 <!-- Collegamento ai font di Google -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -198,5 +234,9 @@
     </div>
 
     <!-- Aggiungi altre categorie o piatti qui -->
-
+    <div style="text-align: center; margin-top: 20px;">
+        <p>Scansiona il QR Code per scaricare o visualizzare il nostro menu:</p>
+        <img src="qrcode_menu.png" alt="QR Code Menu" width="200">
+    </div>
+    
 </section>
