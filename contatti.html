@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contatti - Saulino Ristorante e Pizzeria dal 1992</title>
     <link rel="stylesheet" href="styles-new.css">
+    <script src="script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body class="contact-page">
     <!-- HEADER COMPLETO -->
     <header>
@@ -33,6 +33,16 @@
                 <li><a href="contatti.html">Contatti</a></li>
             </ul>
         </nav>
+        <!--Bottoni per il cambio lingua-->
+        <div class="language-switcher">
+            <button onclick="setLanguage('it')">🇮🇹</button>
+            <button onclick="setLanguage('en')">🇬🇧</button>
+        </div>     
+        
+        <!--Contenuto della pagina contatti-->
+        <h1 data-translate="contact-title">Contattaci</h1>
+        <p data-translate="contact-desc">Siamo qui per aiutarti! Contattaci per prenotazioni o informazioni.</p>
+    
     </header>
 
     <!-- Sezione contatti -->

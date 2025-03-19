@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Allura&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
+<script src="script.js"></script>
 <body>
   
     <header>
@@ -27,11 +28,22 @@
 
         <nav class="header-menu">
           <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="menu.html">Menu</a></li>
-              <li><a href="contatti.html">Contatti</a></li>
+              <li><a href="index.html" data-translate="home">Home</a></li>
+              <li><a href="menu.html" data-translate="menu">Menù</a></li>
+              <li><a href="contatti.html" data-translate="contact">Contatti</a></li>
           </ul>
-      </nav>      
+      </nav>
+
+      <div class="language-switcher">
+        <button onclick="setLanguage('it')">🇮🇹</button>
+        <button onclick="setLanguage('en')">🇬🇧</button>
+      </div>
+
+      <!-- Contenuto della Pagina -->
+      <h1 data-translate="welcome">Benvenuto nel nostro ristorante!</h1>
+      <h2 data-translate="menu-title">Il Nostro Menù</h2>
+      <p data-translate="menu-desc">Scopri i nostri piatti speciali.</p>
+            
     </header>
 
     <section class="galleria-container">
@@ -64,8 +76,10 @@
       </script>      
     
     <section class="home-intro">
-        <p class="intro-quote" style="font-family: 'Allura', cursive;">“Ogni piatto racconta una storia fatta di passione, tradizione e creatività. Da Saulino, ogni boccone è un viaggio sensoriale unico.”</p>
-        <p class="intro-description">Dal 1992, Saulino Ristorante e Pizzeria è sinonimo di qualità e accoglienza nel cuore della provincia di Napoli. La nostra filosofia si basa sull'utilizzo di ingredienti freschi e genuini, selezionati con cura e lavorati con maestria dai nostri chef. Che si tratti delle nostre celebri pizze artigianali o dei raffinati piatti di mare e terra, ogni portata rappresenta un omaggio alla tradizione culinaria partenopea, reinterpretata con estro e originalità per soddisfare anche i palati più esigenti.</p>
+        <p class="intro-quote" data-translate="intro-quote">“Ogni piatto racconta una storia fatta di passione, tradizione e creatività. Da Saulino, ogni boccone è un viaggio sensoriale unico.”</p>
+        <p class="intro-description" data-translate="intro-description">Dal 1992, Saulino Ristorante e Pizzeria è sinonimo di qualità e accoglienza nel cuore della provincia di Napoli. La nostra filosofia si basa sull'utilizzo di ingredienti freschi e genuini, selezionati con cura e lavorati con maestria dai nostri chef. Che si tratti delle nostre celebri pizze artigianali o dei raffinati piatti di mare e terra, ogni portata rappresenta un omaggio alla tradizione culinaria partenopea, reinterpretata con estro e originalità per soddisfare anche i palati più esigenti.
+
+        </p>
     </section>
 
     <footer>

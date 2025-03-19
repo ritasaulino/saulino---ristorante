@@ -243,7 +243,7 @@ body {
 }
 
 .intro-description {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', serif; /* Usa il font corretto */
     font-size: 1.1rem;
     line-height: 1.8;
     color: #555;
@@ -399,4 +399,32 @@ body {
     font-size: 1rem; /* Stesso valore ovunque */
     font-weight: bold;
     padding: 10px 15px;
+}
+
+.language-switcher {
+    position: fixed;
+    top: 80px;  /* Assicura che non sia sotto la navbar */
+    right: 20px;
+    z-index: 1000;
+    background: white;  /* Sfondo bianco per evitare sovrapposizioni */
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.language-switcher button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+/* 🔹 Su schermi piccoli, spostiamo i bottoni in basso a destra */
+@media (max-width: 768px) {
+    .language-switcher {
+        top: auto;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px;
+    }
 }
