@@ -3,12 +3,20 @@ window.onload = function () {
     setLanguage(language);
 };
 
-// Funzione per cambiare lingua e salvare la scelta
+// Funzione per impostare la lingua e aggiornare i testi
 function setLanguage(lang) {
-    localStorage.setItem("language", lang); // Salva la lingua selezionata
-    translatePage(lang);
+    document.querySelectorAll("[data-translate]").forEach(element => {
+        const key = element.getAttribute("data-translate");
+        if (translations[lang] && translations[lang][key]) {
+            element.textContent = translations[lang][key];
+        }
+    });
+
+    // Salva la lingua selezionata in localStorage
+    localStorage.setItem("selectedLanguage", lang);
 }
 
+document.addEventListener("DOMContentLoaded", () => {
 // Dizionario delle traduzioni (corretto, senza duplicazioni)
 const translations = {
     "it": {
@@ -25,7 +33,14 @@ const translations = {
         "intro-description": `Dal 1992, Saulino Ristorante e Pizzeria è sinonimo di qualità e accoglienza nel cuore della provincia di Napoli. 
         La nostra filosofia si basa sull'utilizzo di ingredienti freschi e genuini, selezionati con cura e lavorati con maestria dai nostri chef. 
         Che si tratti delle nostre celebri pizze artigianali o dei raffinati piatti di mare e terra, ogni portata rappresenta un omaggio alla tradizione culinaria partenopea, 
-        reinterpretata con estro e originalità per soddisfare anche i palati più esigenti.`
+        reinterpretata con estro e originalità per soddisfare anche i palati più esigenti.`,
+        "book-now": "Prenota ora",
+        "reach-us": "Raggiungici",
+        "contact-title": "Contatti",
+        "reservations": "Prenotazioni",
+        "address": "Indirizzo",
+        "hours": "Orari",
+        "open-every-day": "Tutti i giorni"
     },
 
     "en": {
@@ -44,17 +59,43 @@ const translations = {
         "intro-description": `Since 1992, Saulino Ristorante and Pizzeria has been synonymous with quality and hospitality in the heart of the Naples province. 
 Our philosophy is based on the use of fresh and genuine ingredients, carefully selected and masterfully prepared by our chefs. 
 Whether it’s our renowned artisanal pizzas or our refined seafood and meat dishes, each course is a tribute to Neapolitan culinary tradition, 
-reinterpreted with creativity and originality to satisfy even the most discerning palates.`
+reinterpreted with creativity and originality to satisfy even the most discerning palates.`,
+        "book-now": "Book Now",
+        "reach-us": "Find Us",
+        "contact-title": "Contacts",
+        "reservations": "Reservations",
+        "address": "Address",
+        "hours": "Opening Hours",
+        "open-every-day": "Open every day"
 }
 };
 
-// Funzione per tradurre la pagina
-function translatePage(lang) {
-    document.querySelectorAll("[data-translate]").forEach(element => {
-        let key = element.getAttribute("data-translate");
-        if (translations[lang] && translations[lang][key]) {
-            element.innerHTML = translations[lang][key]; // Usa innerHTML per evitare problemi di formattazione
-        }
-    });
-}
+    // Leggi la lingua salvata o imposta l'italiano di default
+    let savedLanguage = localStorage.getItem("selectedLanguage") || "it";
+    
+    function setLanguage(lang) {
+        // Aggiorna tutti gli elementi con il data-translate
+        document.querySelectorAll("[data-translate]").forEach(element => {
+            const key = element.getAttribute("data-translate");
+            if (translations[lang] && translations[lang][key]) {
+                element.textContent = translations[lang][key];
+            }
+        });
 
+        // Salva la lingua selezionata
+        localStorage.setItem("selectedLanguage", lang);
+    }
+
+    // Applica la lingua salvata al caricamento della pagina
+    setLanguage(savedLanguage);
+
+    // Aggiungi l'evento ai bottoni per cambiare lingua
+    document.querySelectorAll("[data-lang]").forEach(button => {
+        button.addEventListener("click", function () {
+            const lang = this.getAttribute("data-lang");
+            setLanguage(lang);
+            localStorage.setItem("selectedLanguage", lang);
+            location.reload(); // Ricarica la pagina per applicare subito la traduzione
+        });
+    });
+});

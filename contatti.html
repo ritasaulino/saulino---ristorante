@@ -8,6 +8,7 @@
     <script src="script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body class="contact-page">
@@ -19,26 +20,29 @@
             </div>
 
             <div class="header-links">
-                <a href="https://social.quandoo.com/en/groups/saulino-ristorante-e-pizzeria-dal-1992-105832">📞 Prenota ora</a>
-                <a href="https://www.google.com/maps/place/Via+Ripuaria+187,+Giugliano+in+Campania" target="_blank">🏠 Raggiungici</a>
-                <a href="https://www.facebook.com/lebaiserristorantepizzeria" target="_blank">𝑓</a>
-                <a href="https://www.instagram.com/saulinoristorantedal1992/?igsh=MThwcDFxN2hvcTNiZg%3D%3D&utm_source=qr#" target="_blank">📸</a>
+                    <a href="https://social.quandoo.com/en/groups/saulino-ristorante-e-pizzeria-dal-1992-105832" data-translate="book-now">📞 Prenota ora</a>
+                    <a href="https://www.google.com/maps/place/Via+Ripuaria+187,+Giugliano+in+Campania" target="_blank" data-translate="reach-us">🏠 Raggiungici</a>               
+                <a href="https://www.facebook.com/lebaiserristorantepizzeria" target="_blank">
+                    <i class="fa-brands fa-facebook fa-2x"></i>
+                </a>
+                <a href="https://www.instagram.com/saulinoristorantedal1992/?igsh=MThwcDFxN2hvcTNiZg%3D%3D&utm_source=qr#" target="_blank">
+                    <i class="fa-brands fa-instagram fa-2x"></i>
+                </a>                
             </div>
         </div>
 
         <nav class="header-menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="contatti.html">Contatti</a></li>
+                <li><a href="index.html" data-translate="home">Home</a></li>
+                <li><a href="menu.html" data-translate="menu">Menù</a></li>
+                <li><a href="contatti.html" data-translate="contact">Contatti</a></li>
             </ul>
         </nav>
         <!--Bottoni per il cambio lingua-->
         <div class="language-switcher">
-            <button onclick="setLanguage('it')">🇮🇹</button>
-            <button onclick="setLanguage('en')">🇬🇧</button>
-        </div>     
-        
+            <button data-lang="it">🇮🇹</button>
+            <button data-lang="en">🇬🇧</button>
+        </div>
         <!--Contenuto della pagina contatti-->
         <h1 data-translate="contact-title">Contattaci</h1>
         <p data-translate="contact-desc">Siamo qui per aiutarti! Contattaci per prenotazioni o informazioni.</p>
@@ -53,16 +57,15 @@
             <div class="contact-item">
                 <span class="icon">📞</span>
                 <div class="text">
-                    <strong>PRENOTAZIONI</strong><br>
-                    +39 081 8391228
-                    +39 351 2734320
+                    <p class="contact-label" data-translate="reservations">Prenotazioni</p>
+                    <p>+39 081 8391228 +39 351 2734320</p>
                 </div>
             </div>
 
             <div class="contact-item">
                 <span class="icon">📍</span>
                 <div class="text">
-                    <strong>INDIRIZZO</strong><br>
+                    <p class="contact-label" data-translate="address">Indirizzo</p>
                     Via Ripuaria 187 - Giugliano in Campania (NA)
                 </div>
             </div>
@@ -70,8 +73,8 @@
             <div class="contact-item">
                 <span class="icon">⏰</span>
                 <div class="text">
-                    <strong>ORARI</strong><br>
-                    Tutti i giorni<br>
+                    <p class="contact-label" data-translate="hours">Orari</p>
+                    <p data-translate="open-every-day">Tutti i giorni</p>
                     12.30 – 24.00
                 </div>
             </div>

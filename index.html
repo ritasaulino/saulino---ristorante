@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles-new.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Allura&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <script src="script.js"></script>
@@ -19,10 +20,14 @@
             </div>
 
             <div class="header-links">
-                <a href="https://social.quandoo.com/en/groups/saulino-ristorante-e-pizzeria-dal-1992-105832">📞 Prenota ora</a>
-                <a href="https://www.google.com/maps/place/Via+Ripuaria+187,+Giugliano+in+Campania" target="_blank">🏠 Raggiungici</a>
-                <a href="https://www.facebook.com/lebaiserristorantepizzeria" target="_blank">𝑓</a>
-                <a href="https://www.instagram.com/saulinoristorantedal1992/?igsh=MThwcDFxN2hvcTNiZg%3D%3D&utm_source=qr#" target="_blank">📸</a>
+              <a href="https://social.quandoo.com/en/groups/saulino-ristorante-e-pizzeria-dal-1992-105832" data-translate="book-now">📞 Prenota ora</a>
+              <a href="https://www.google.com/maps/place/Via+Ripuaria+187,+Giugliano+in+Campania" target="_blank" data-translate="reach-us">🏠 Raggiungici</a>
+                <a href="https://www.facebook.com/lebaiserristorantepizzeria" target="_blank">
+                  <i class="fa-brands fa-facebook fa-2x"></i>
+              </a>
+              <a href="https://www.instagram.com/saulinoristorantedal1992/?igsh=MThwcDFxN2hvcTNiZg%3D%3D&utm_source=qr#" target="_blank">
+                  <i class="fa-brands fa-instagram fa-2x"></i>
+              </a>              
             </div>
         </div>
 
@@ -35,9 +40,9 @@
       </nav>
 
       <div class="language-switcher">
-        <button onclick="setLanguage('it')">🇮🇹</button>
-        <button onclick="setLanguage('en')">🇬🇧</button>
-      </div>
+        <button data-lang="it">🇮🇹</button>
+        <button data-lang="en">🇬🇧</button>
+    </div>
 
       <!-- Contenuto della Pagina -->
       <h1 data-translate="welcome">Benvenuto nel nostro ristorante!</h1>
