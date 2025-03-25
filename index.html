@@ -10,7 +10,58 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Allura&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<script src="script.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saulino Ristorante</title>
+    <style>
+        /* Stile per il popup */
+        #promo-popup {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(255, 223, 186, 0.95);
+            color: #8b0000;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            font-family: Arial, sans-serif;
+            max-width: 300px;
+            text-align: center;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        /* Stile per il pulsante di chiusura */
+        #close-btn {
+            background: #8b0000;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        #close-btn:hover {
+            background: #a30000;
+        }
+
+        /* Animazione fade-in */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
 <body>
   
     <header>
@@ -20,8 +71,8 @@
             </div>
 
             <div class="header-links">
-              <a href="https://social.quandoo.com/en/groups/saulino-ristorante-e-pizzeria-dal-1992-105832" data-translate="book-now">📞 Prenota ora</a>
-              <a href="https://www.google.com/maps/place/Via+Ripuaria+187,+Giugliano+in+Campania" target="_blank" data-translate="reach-us">🏠 Raggiungici</a>
+              <a href="https://social.quandoo.com/en/groups/saulino-ristorante-e-pizzeria-dal-1992-105832" data-translate="book-now">📞 Prenota Online</a>
+              <a href="https://www.google.com/maps/place/Saulino+-+Ristorante+%26+Pizzeria+dal+1992,+Via+Ripuaria,+187,+80014+Giugliano+in+Campania+NA/data=!4m2!3m1!1s0x133b1a85942b9a6b:0x2fbd7c8703cac6b2?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESBzI1LjExLjEYACCenQoqdSw5NDI1NTQ0OCw5NDI0MjYxMyw5NDIyMzI5OSw5NDIxNjQxMyw5NDIxMjQ5Niw5NDIwNzM5NCw5NDIwNzUwNiw5NDIwODUwNiw5NDIxNzUyMyw5NDIxODY1Myw5NDIyOTgzOSw0NzA4NDM5Myw5NDIxMzIwMEICSVQ%3D&skid=85cd2a36-9c62-495e-88f6-bfc8fd36d73b&g_st=aw" target="_blank" data-translate="reach-us">🏠 Raggiungici</a>
                 <a href="https://www.facebook.com/lebaiserristorantepizzeria" target="_blank">
                   <i class="fa-brands fa-facebook fa-2x"></i>
               </a>
@@ -43,13 +94,8 @@
         <button data-lang="it">🇮🇹</button>
         <button data-lang="en">🇬🇧</button>
     </div>
-
-      <!-- Contenuto della Pagina -->
-      <h1 data-translate="welcome">Benvenuto nel nostro ristorante!</h1>
-      <h2 data-translate="menu-title">Il Nostro Menù</h2>
-      <p data-translate="menu-desc">Scopri i nostri piatti speciali.</p>
-            
-    </header>
+    <!-- Bottone per riaprire il popup -->
+<button id="show-offer-btn" class="offer-btn">🎁 Clicca qui per vedere la nostra offerta!</button>
 
     <section class="galleria-container">
         <div class="gruppo">
@@ -88,7 +134,19 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Saulino Ristorante e Pizzeria - Tutti i diritti riservati.</p>
+      <p>&copy; 2025 Saulino Ristorante e Pizzeria - Tutti i diritti riservati.</p>
     </footer>
+
+    <!-- Popup promozionale -->
+    <div id="promo-popup" style="display: none;">
+      <p id="popup-title"><strong>🎉 Offerta Speciale!</strong></p>
+      <p id="popup-text1">Dal <strong>18 marzo al 30 aprile</strong>, ritira la tua pizza in sede e assapora la bontà!</p>
+      <p id="popup-text2"><strong>🍕 Margherita e Marinara a soli 3€!</strong></p>
+      <p id="popup-text3">Offerta valida <strong>da lunedì a giovedì</strong>. Non perdertela! 😉</p>
+      <button id="close-btn">Chiudi</button>
+  </div>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
