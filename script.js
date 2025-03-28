@@ -1,8 +1,3 @@
-window.onload = function () {
-    let language = localStorage.getItem("language") || "it"; // Lingua predefinita: Italiano
-    setLanguage(language);
-};
-
 document.addEventListener("DOMContentLoaded", () => {
 // Dizionario delle traduzioni (corretto, senza duplicazioni)
 const translations = {

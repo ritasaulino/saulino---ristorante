@@ -34,16 +34,18 @@ img {
 
 
 /* ========== NAVBAR CLASSICA (FISSA IN ALTO) ========== */
-.header-menu {
+.header-menu { 
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background-color: white;
     padding: 15px 0;
-    z-index: 9999;
+    z-index: default;
     text-align: center;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    /* Aggiunto per posizionare elementi assoluti all'interno */
+    position: relative;
 }
 
 .header-menu ul {
@@ -446,14 +448,18 @@ img {
 }
 
 .language-switcher {
-    position: fixed;
-    top: 80px;  /* Assicura che non sia sotto la navbar */
+    position: absolute;
+    top: 15px;
     right: 20px;
     z-index: 1000;
-    background: white;  /* Sfondo bianco per evitare sovrapposizioni */
-    padding: 5px;
+    background: none;
+    padding: 0;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
+
 
 .language-switcher button {
     background: none;
@@ -461,16 +467,6 @@ img {
     font-size: 24px;
     cursor: pointer;
     margin: 0 5px;
-}
-
-/* 🔹 Su schermi piccoli, spostiamo i bottoni in basso a destra */
-@media (max-width: 768px) {
-    .language-switcher {
-        top: auto;
-        bottom: 20px;
-        right: 20px;
-        padding: 10px;
-    }
 }
 .offer-btn {
     background-color: transparent;
